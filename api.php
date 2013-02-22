@@ -187,7 +187,7 @@ $app->get('/users', $checkToken(), function () use ($server, $app) {
 	$users = $user_model->getUsers();
 
 	// Check the access token owner is a client
-	if ($server->getOwnerType() === 'client')
+	if ($server->getOwnerType() === 'client' && $server->hasScope('users.list'))
 	{
 		$response = array(
 			'error' => null,
@@ -218,7 +218,7 @@ $app->get('/users', $checkToken(), function () use ($server, $app) {
 		$res->body(json_encode($response));
 	}
 
-	// Access token owner isn't a client...
+	// Access token owner isn't a client or doesn't have the correct scope
 	else
 	{
 		$res = $app->response();

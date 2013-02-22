@@ -14,7 +14,7 @@
 
 	INSERT INTO `oauth_client_endpoints` (`id`, `client_id`, `redirect_uri`) VALUES (1,'I6Lh72kTItE6y29Ig607N74M7i21oyTo','http://client.dev/signin/redirect');
 
-	INSERT INTO `oauth_scopes` (`id`, `scope`, `name`, `description`) VALUES (1,'user.basic','Basic user details','Returns basic user details (user ID and name)'), (2,'user.contact','User\'s contact details','Returns a user\'s contact details');
+	INSERT INTO `oauth_scopes` (`id`, `scope`, `name`, `description`) VALUES (1,'user.basic','Basic user details','Returns basic user details (user ID and name)'), (2,'user.contact','User\'s contact details','Returns a user\'s contact details'), (3,'users.list','List users','Returns a list of users');
 
 	INSERT INTO `oauth_sessions` (`id`, `client_id`, `redirect_uri`, `owner_type`, `owner_id`, `auth_code`, `access_token`, `refresh_token`, `access_token_expires`, `stage`, `first_requested`, `last_updated`) VALUES	(1,'I6Lh72kTItE6y29Ig607N74M7i21oyTo','http://client.dev/signin/redirect','client','1',NULL,'cheRL8oMIBQ6sYgnrv8L6M8vxDEEDMAcmdoUhpol',NULL,1461270703,'granted',1361265844,1361267103);
 
