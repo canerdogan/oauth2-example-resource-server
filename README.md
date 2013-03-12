@@ -19,6 +19,15 @@
 	INSERT INTO `oauth_sessions` (`id`, `client_id`, `redirect_uri`, `owner_type`, `owner_id`, `auth_code`, `access_token`, `refresh_token`, `access_token_expires`, `stage`, `first_requested`, `last_updated`) VALUES	(1,'I6Lh72kTItE6y29Ig607N74M7i21oyTo','http://client.dev/signin/redirect','client','1',NULL,'cheRL8oMIBQ6sYgnrv8L6M8vxDEEDMAcmdoUhpol',NULL,1461270703,'granted',1361265844,1361267103);
 
 	INSERT INTO `oauth_session_scopes` (`id`, `session_id`, `scope_id`) VALUES (1,1,1),	(2,1,2);
+	
+	CREATE TABLE `users` (
+	  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+	  `firstname` varchar(255) NOT NULL DEFAULT '',
+	  `lastname` varchar(255) NOT NULL DEFAULT '',
+	  `email` varchar(255) NOT NULL DEFAULT '',
+	  `phone` varchar(255) NOT NULL DEFAULT '',
+	  PRIMARY KEY (`id`)
+	) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 	INSERT INTO `users` (`id`, `firstname`, `lastname`, `email`, `phone`) VALUES (1,'Alex','Bilbie','hello@example.com','01234567910'),	(2,'Jane','Doe','jdoe@example.com','01987654321');
 
